@@ -143,6 +143,7 @@ function handle_callback( conf, callback_url )
             body = "grant_type=authorization_code&client_id=" .. conf.client_id .. "&client_secret=" .. conf.client_secret .. "&code=" .. args.code .. "&redirect_uri=" .. callback_url,
             headers = {
               ["Content-Type"] = "application/x-www-form-urlencoded",
+              ["Accept"] = "application/json",
             }
         })
 
